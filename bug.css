@@ -1,0 +1,15 @@
+The following CSS code snippet demonstrates a common issue where the specificity of selectors can lead to unexpected behavior.  The `#myDiv p` selector is more specific than the `.myClass p` selector, so the `color: blue;` declaration in the former will override the `color: red;` declaration in the latter.  This is known as CSS Specificity.  The unexpected behavior arises when developers don't fully understand this principle and assume that the later declaration will take precedence.
+
+```css
+.myClass p {
+  color: red;
+}
+
+#myDiv p {
+  color: blue;
+}
+
+#myDiv {
+  background-color: yellow;
+}
+```
