@@ -1,0 +1,21 @@
+To solve the issue, we need to either make the `.myClass p` selector more specific or use the `!important` flag (though generally not recommended).  This solution modifies the selector to ensure the intended color is applied.
+
+```css
+.myClass p {
+  color: red;
+}
+
+#myDiv p {
+  color: blue !important; /*Use !important flag (not recommended)*/
+}
+
+.myClass #myDiv p { /* Making the selector more specific*/
+  color: red;
+}
+
+#myDiv {
+  background-color: yellow;
+}
+```
+
+The `!important` flag forces the style to be applied, regardless of specificity. However, using `!important` is often discouraged as it can make CSS difficult to maintain and debug. The better approach is to adjust selectors to make specificity work for you.
